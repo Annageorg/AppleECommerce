@@ -1,3 +1,17 @@
+// Common JS
+document.querySelectorAll('.watch-control,.controls a').forEach((control) => {
+    control.addEventListener('click', (e) => {
+        e.preventDefault()
+    })
+})
+document.querySelectorAll('.iphone-btns a').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+    })
+})
+// End of Common JS
+
+
 // Slideshow
 const slideshowDivs = () => {
     for (let i = 1; i <= 5; i++) {
@@ -85,9 +99,68 @@ playPause()
 const section3Content = document.querySelector('.section-3-content')
 
 window.addEventListener('scroll', () => {
-    if(window.pageYOffset + window.innerHeight >= 
-        section3Content.offsetTop + section3Content.offsetHeight /2) {
-          section3Content.classList.add('change')
+    if (window.pageYOffset + window.innerHeight >=
+        section3Content.offsetTop + section3Content.offsetHeight / 2) {
+        section3Content.classList.add('change')
     }
 })
 // End of Section 3
+
+// Section 4
+const watchBands = document.querySelector('.watch-bands')
+const watchCases = document.querySelector('.watch-cases')
+
+const watchTopControl = document.querySelector('.watch-top-control')
+const watchRightControl = document.querySelector('.watch-right-control')
+const watchBottomControl = document.querySelector('.watch-bottom-control')
+const watchLeftControl = document.querySelector('.watch-left-control')
+
+let axisY = 0
+let axisX = 0
+
+const hideControl = () => {
+    switch (axisY) {
+        case -280:
+            watchTopControl.classList.add('hideControl')
+            break;
+        case 280:
+            watchBottomControl.classList.add('hideControl')
+            break;
+        default:
+            watchTopControl.classList.remove('hideControl')
+            watchBottomControl.classList.remove('hideControl')
+    }
+    switch (axisX) {
+        case -280:
+            watchLeftControl.classList.add('hideControl')
+            break;
+        case 280:
+            watchRightControl.classList.add('hideControl')
+            break;
+        default:
+            watchLeftControl.classList.remove('hideControl')
+            watchRightControl.classList.remove('hideControl')
+    }
+
+}
+
+watchTopControl.addEventListener('click', () => {
+    watchCases.style.marginTop = `${axisY -= 70}rem`
+    hideControl()
+})
+watchBottomControl.addEventListener('click', () => {
+    watchCases.style.marginTop = `${axisY += 70}rem`
+    hideControl()
+})
+watchRightControl.addEventListener('click', () => {
+    watchBands.style.marginRight = `${axisX += 70}rem`
+    hideControl()
+})
+watchLeftControl.addEventListener('click', () => {
+    watchBands.style.marginRight = `${axisX -= 70}rem`
+    hideControl()
+})
+
+
+
+// End of Section 4
