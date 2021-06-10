@@ -534,7 +534,25 @@ html {
 /* End of Section 3 info */
 
 /* End of Section 3 content */
-
-
 /************************ End of Section 3 ******************/
+
+/************************ Section 4 ******************/
+.section-4 {
+    height: 140vh;
+    padding: 20vh 0;
+}
+/* Watches */
+/* Bands */
+.watches {
+
+}
+/* End of Bands */
+
+/* Cases */
+
+/* End of Cases */
+
+/* End of Watches */
+
+/************************ End of Section 4 ******************/
 
