@@ -10,18 +10,15 @@
     text-decoration: none;
     font-family: 'Work Sans', sans-serif;
 }
-
 html {
     font-size: 62.5%;
 }
-
 :root {
     --primary-color: #6edae6;
     --white-color: #fff;
     --black-color: #000;
     --cuboid-color: #fee;
 }
-
 .center {
     display: flex;
     justify-content: center;
@@ -29,7 +26,7 @@ html {
 }
 /* End of Common styles */
 
-/* Section 1 */
+/************************** Section 1 *********************/
 .section-1 {
     width: 100%;
     height: 100vh;
@@ -71,6 +68,7 @@ html {
 }
 /* End of Navbar */
 
+/**************** 3D *****************/
 /* Cuboid */
 .cube-wrapper {
     perspective: 100rem;
@@ -301,4 +299,29 @@ html {
     opacity: 1;
 }
 /* End of Slideshow */
-/* End of Section 1 */
+/************************ End of Section 1 ******************/
+
+/************************ Section 2 ******************/
+.section-2 {
+    width: 100%;
+    height: 120vh;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Section 2 heading */
+.section-2-heading {
+    font-size: 10rem;
+    font-weight: 200;
+    color: var(--black-color);
+}
+/* End of Section 2 heading */
+
+/* Section 2 images */
+
+/* End of Section 2 images */
+/************************ End of Section 2 ******************/
+
