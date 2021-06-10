@@ -447,10 +447,28 @@ html {
    position: absolute;
    top: 0;
    left: 0;
+   flex-direction: column;
 }
 .loading i {
     font-size: 10rem;
     color: var(--white-color);
+    margin-bottom: 2rem;
+}
+.progress-bar {
+    width: 22rem;
+    height: 0.3rem;
+    background-color: #888;
+    border-radius: 5rem;
+    position: relative;
+}
+.progress-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--white-color);
 }
 /* End of Section 3 loading */
 
