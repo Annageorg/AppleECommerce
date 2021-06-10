@@ -142,6 +142,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(131, 112, 5);
     font-size: 2rem;
     font-weight: 300;
 }
@@ -178,6 +179,7 @@ html {
     font-size: 1.5rem;
     color: var(--primary-color);
     opacity: 0.5;
+    transition: opacity 0.5s;
 }
 .controls a:nth-child(1) {
     top: 0;
@@ -200,7 +202,17 @@ html {
     transform: translateY(-50%);
 }
 .controls a:nth-child(5) {
-    
+    top: 10%;
+    right: 10%;
+    transform: rotate(45deg);
+}
+.controls a:nth-child(6) {
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(45deg);
+}
+.controls a:hover i {
+    opacity: 1;
 }
 /* End of Controls */
 /* End of Cuboid */
