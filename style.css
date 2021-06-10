@@ -642,25 +642,58 @@ html {
 }
 /* Section 5 content */
 .airpods {
-
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: relative;
 }
 /* End of Section 5 content */
 
 /* Section 5 heading */
 .section-5-heading {
-
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15rem;
+    font-weight: 300;
+    color: var(--white-color);
+    text-shadow: 0.1rem 0.1rem 0 rgb(109, 109, 109);
 }
 /* End of Section 5 heading */
 
 /* Section 5 images */
-.section-5 img {
-
+.airpods img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
+.airpods-img-2 {
+    background-color: var(--primary-color);
 }
 /* End of Section 5 images */
 
 /* Section 5 buttons */
-.aipods-buttons {
-    
+.airpods-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+}
+.airpods-btn {
+    width: 15rem;
+    height: 4rem;
+    background-color: var(--primary-color);
+    margin: 0 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.airpods-btn:nth-child(1) {
+    background-color: var(--white-color);
+    color: var(--primary-color);
 }
 /* End of Section 5 buttons */
 
